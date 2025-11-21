@@ -6,6 +6,15 @@ To use this fork with `@rneui/themed` and ensure compatibility:
 
 ### Option 1: Install both from your fork (Recommended)
 
+**Important:** Install from the `packages/base` subdirectory:
+
+```bash
+npm install \
+  https://github.com/Priyanshu-Agrawal/rneui-base-safe-areav5-fork.git#main:packages/base \
+  @rneui/themed
+```
+
+Or using the shorthand (after the fix):
 ```bash
 npm install \
   https://github.com/Priyanshu-Agrawal/rneui-base-safe-areav5-fork.git#main \
@@ -39,6 +48,11 @@ Or for npm (using `overrides`):
 ```bash
 npm install @rneui/themed
 npm install https://github.com/Priyanshu-Agrawal/rneui-base-safe-areav5-fork.git#main
+```
+
+**Note:** The postinstall script has been fixed to not cause errors when installing as a dependency. If you still encounter issues, try:
+```bash
+npm install --ignore-scripts https://github.com/Priyanshu-Agrawal/rneui-base-safe-areav5-fork.git#main
 ```
 
 ## Compatibility
