@@ -37,7 +37,7 @@
     "format": "prettier --check ./packages",
     "lint-staged": "lint-staged",
     "lint": "eslint ./packages --ext .js,.jsx,.ts,.tsx",
-    "postinstall": "husky install",
+    "postinstall": "node -e \"try { require('husky').install() } catch (e) {}\"",
     "test": "yarn workspaces foreach -Ap run test",
     "test:update": "yarn workspaces foreach -Ap run test -u",
     "typescript": "tsc --noEmit"
